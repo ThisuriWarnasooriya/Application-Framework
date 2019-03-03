@@ -1,0 +1,2 @@
+1. Create a function as a variable (function expression) that prints ‘Hello World’ to console and another function which accepts a variable. The argument passed to the second function should be executed as a function inside the body. Call the second function passing the first function as the argument. Check the output.
+2. Use curly brackets to create JSON like JavaScript object and add properties and functions to the object.
