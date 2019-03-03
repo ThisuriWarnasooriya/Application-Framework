@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Lab 2_this</title>
+
+    <script>
+
+
+
+                //global variable
+                var vehicleName = 'Toyota';
+
+                function printVehicleNameOuter() {
+                    console.log(this.vehicleName);
+                }
+
+                console.log(this);
+
+                printVehicleNameOuter();
+
+
+                /*
+
+                               var vehicle = {
+                                   vehicleName: 'Nissan',
+                                   printVehicleNameInner: printVehicleNameOuter
+                               };
+
+                               */
+
+
+
+        var vehicle = {
+            vehicleName: 'Nissan',
+            printvehicleNameInner: function () {
+                return function () {
+                    console.log(this.vehicleName);
+                }
+
+            }
+        };
+
+                vehicle.printvehicleNameInner();
+
+        var execute = vehicle.printvehicleNameInner();
+        execute();
+
+        execute.call(vehicle);
+
+        var execute = vehicle.printvehicleNameInner().bind(vehicle);
+        execute();
+
+
+    </script>
+
+</head>
+<body>
+
+</body>
+</html>
