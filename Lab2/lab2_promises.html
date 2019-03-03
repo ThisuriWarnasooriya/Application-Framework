@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>lab2_promises</title>
+
+    <script>
+/*
+        function fetchUsers() {
+            fetch('https://api.github.com/users').then(function (response) {
+              return response.json();
+            }).then(function (json) {
+                console.log(json);
+            });
+        }
+
+        fetchUsers();
+*/
+
+        function fetchUsers() {
+            return fetch('https://api.github.com/users')
+                .then(response => response.json());
+        }
+
+        fetchUsers().then(function (json) {
+            console.log(json);
+        })
+
+    </script>
+
+</head>
+<body>
+
+</body>
+</html>

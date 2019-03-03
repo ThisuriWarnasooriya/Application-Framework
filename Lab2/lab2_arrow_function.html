@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>lab2_arrow_function</title>
+
+    <script>
+
+        function fetchUsers() {
+            return fetch('https://api.github.com/users')
+                .then(response => response.json());
+        }
+
+        fetchUsers().then(json => {
+            console.log(json);
+        });
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>
